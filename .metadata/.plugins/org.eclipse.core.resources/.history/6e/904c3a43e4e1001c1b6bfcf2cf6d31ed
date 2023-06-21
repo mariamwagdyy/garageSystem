@@ -1,0 +1,61 @@
+package Main;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.time.LocalDateTime;
+
+public class ParkingGarage {
+    private int totalIncome;
+    private int totalVehicles;
+    private int arrivalTime;
+    private int arrivalhour;
+    private int arrivalmin;
+    private int depTime;
+    private int noOfSlots;
+    List<Slot> slots = new ArrayList<Slot>();
+
+    // default constructor for parking garage
+    public ParkingGarage() {
+        totalIncome = 0;
+        totalVehicles = 0;
+        arrivalTime = 0;
+        depTime = 0;
+    }
+
+    // parameterized constructor for parking garage which takes list of slots as a
+    // parameter
+    public ParkingGarage(List<Slot> slots) {
+        this.slots = slots;
+        this.noOfSlots = slots.size();
+    }
+
+    // setter for the tota income
+    public void settotalincome(int totalIncome) {
+        this.totalIncome = totalIncome;
+    }
+
+    // setter for the total no of vehicles
+    public void settotalvehicles(int totalVehicles) {
+        this.totalVehicles = totalVehicles;
+    }
+    
+    // getter for the total income
+    public int gettotalincome() {
+        return this.totalIncome;
+    }
+
+    // getter for the total no of vehicles
+    public int gettotalvehicles() {
+        return this.totalVehicles;
+    }
+    
+    /*public void parkout() {
+        Vehicle vehicle = new Vehicle();
+        System.out.println("Enter your car id");
+        Scanner obj = new Scanner(System.in);
+        int ID = obj.nextInt();
+        vehicle.setID(ID);
+    }*/
+
+}

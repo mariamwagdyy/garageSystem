@@ -1,0 +1,30 @@
+package Main;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class ParkIn extends Park{ 
+    @Override
+	public void parkin(Vehicle vehicle)
+    {
+    	//Vehicle vehicle=new Vehicle();
+    	
+    	arrivaltime arrive=new arrivaltime();
+        Configsys config =new Configsys();
+        int num = config.choose();
+        switch (num) {
+            case 1:
+                BestFitconf best=new BestFitconf();
+                best.bestfit(vehicle.info());
+                arrive.calculateTime();
+                break;
+            case 2:
+            	FirstComeconf first=new FirstComeconf();
+            	first.firstcome(vehicle.info());
+            	arrive.calculateTime();
+            	break;
+        }
+    }
+}

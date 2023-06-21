@@ -1,0 +1,33 @@
+package Main;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.time.LocalDateTime;
+
+public class ParkingGarage {
+    private int totalIncome;
+    List<Slot> slots = new ArrayList<Slot>();
+
+    // default constructor for parking garage
+    public ParkingGarage(){
+    	this.totalIncome=0;
+    }
+
+    // setter for the total income
+    public void settotalincome(int totalIncome) {
+        this.totalIncome = totalIncome;
+    }
+
+   
+    // getter for the total income
+    public int gettotalincome() {
+    	Park p=new Park();
+    	totalIncome+=p.fees;
+        return this.totalIncome;
+    }
+
+   
+  
+
+}

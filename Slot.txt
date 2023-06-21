@@ -1,0 +1,57 @@
+package Main;
+public class Slot
+{
+    private int slotWidth;
+    private int slotDepth;
+    private boolean isEmpty;
+    //slot default constructor
+    public Slot()
+    {
+        slotDepth=0;
+        slotWidth=0;
+        isEmpty=true;
+    } 
+    //slot parametrized constructor takes slot width and slot depth as parameters
+    public Slot(int slotWidth,int slotDepth)
+    {
+        this.slotWidth=slotWidth;
+        this.slotDepth=slotDepth;
+        isEmpty=true;
+    }
+    // setter for slot width
+    public void setSlotWidth(int slotWidth)
+    {
+        this.slotWidth=slotWidth;
+    }
+    //setter for slot depth
+    public void setSlotDepth(int slotDepth)
+    {
+        this.slotDepth=slotDepth;
+    }
+    //setter for is empty attribute 
+    public void setIsEmpty(boolean isEmpty){
+        this.isEmpty=isEmpty;
+
+    }
+    //getter for slot width
+    public int getSlotWidth()
+    {
+        return this.slotWidth;
+    }
+    //getter for slot depth
+    public int getSlotDepth()
+    {
+        return this.slotDepth;
+    }
+    // getter for is empty
+    public boolean getIsEmpty(){
+        return this.isEmpty;
+    }
+    // function that print the width and depth for each slot
+    public void displayDimentions()
+    {
+        System.out.println("Width: " + this.slotWidth);
+        System.out.println("Depth: " + this.slotDepth);
+    }
+
+}

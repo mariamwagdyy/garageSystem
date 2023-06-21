@@ -1,0 +1,8 @@
+package Main;
+
+public class Vehicleinfo implements Screen {
+	public void display()
+	{
+		vehicle.info();
+	}
+}

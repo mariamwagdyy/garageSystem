@@ -1,0 +1,13 @@
+package Main;
+
+public interface ParkingGarage {
+	public int Arivtime=0;
+	public int Deptime=0;
+	public int totaltime=0;
+	public int fees=0;
+	public int totalIncome=0;
+	 public void parkin(Vehicle vehicle);
+	 public void parkout();
+	 public int getfees();
+	 public void gettotalincome();
+}

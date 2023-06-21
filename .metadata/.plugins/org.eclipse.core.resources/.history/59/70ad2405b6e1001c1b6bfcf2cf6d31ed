@@ -1,0 +1,38 @@
+package Main;
+
+public class FirstComeconf extends Configuration {
+	void firstcome()
+    {
+        int min=1;
+        Boolean test =false;
+        //loop to access the list slots
+        for(int i=0;i<slots.size();i++)
+        {
+            //see wether the slot is empty or not
+            if(slots.get(i).getIsEmpty())
+            {
+                //the slot is empty
+                //see wether the dimensions of the vehicle is suitable withe the dimensions of the slot
+                if((slots.get(i).getSlotWidth()>vehicle.getVehicleWidth()) && (slots.get(i).getSlotDepth()>vehicle.getVehicleDepth()))
+                {   
+                    //the dimension of the vehicle is suitable
+                    //see wether the last slot dimension is more suitable than this slot dimension or not
+                    if((slots.get(min).getSlotWidth()>=slots.get(i).getSlotWidth())&&(slots.get(min).getSlotDepth()>=slots.get(i).getSlotDepth())) 
+                    {
+                        //put the best fit slot number in min
+                        min=i;
+                        //state that the slots is taken
+                        slots.get(i).setIsEmpty(false);
+                        test=true;
+                    }
+                }
+            }
+            //if the slot is unavilable
+                if(!test)
+                {
+                    //print no available slots
+                    System.out.println("No available slots");
+                }
+        }
+    }
+}

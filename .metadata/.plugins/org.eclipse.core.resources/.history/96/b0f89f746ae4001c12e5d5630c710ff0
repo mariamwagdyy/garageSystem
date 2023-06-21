@@ -1,0 +1,8 @@
+package Main;
+
+public interface ParkingGarage {
+
+	 public void parkin(Vehicle vehicle);
+	 public void parkout(int method);
+	 public void gettotalincome();
+}
